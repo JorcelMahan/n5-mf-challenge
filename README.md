@@ -156,14 +156,6 @@ npm run test:remote1
    - Each app in the `dist` folder can be deployed independently
    - Ensure the host application can access remote applications via their deployed URLs
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
-
 ## License
 
 This project is for demonstration purposes.
