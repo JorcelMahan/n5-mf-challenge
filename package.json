@@ -1,0 +1,39 @@
+{
+  "name": "n5-challenge-monorepo",
+  "version": "1.0.0",
+  "description": "Microfrontend challenge with host and remote applications",
+  "private": true,
+  "workspaces": [
+    "host",
+    "remote1",
+    "remote2"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:host && npm run install:remote1 && npm run install:remote2",
+    "install:host": "cd host && npm install",
+    "install:remote1": "cd remote1 && npm install",
+    "install:remote2": "cd remote2 && npm install",
+    "dev": "concurrently \"npm run dev:host\" \"npm run dev:remote1\" \"npm run dev:remote2\"",
+    "dev:host": "cd host && npm run dev",
+    "dev:remote1": "cd remote1 && npm run dev",
+    "dev:remote2": "cd remote2 && npm run dev",
+    "build": "npm run build:remote1 && npm run build:remote2 && npm run build:host",
+    "build:host": "cd host && npm run build",
+    "build:remote1": "cd remote1 && npm run build",
+    "build:remote2": "cd remote2 && npm run build",
+    "test": "npm run test:host && npm run test:remote1",
+    "test:host": "cd host && npm run test:run",
+    "test:remote1": "cd remote1 && npm run test:run",
+    "lint": "npm run lint:host && npm run lint:remote1 && npm run lint:remote2",
+    "lint:host": "cd host && npm run lint",
+    "lint:remote1": "cd remote1 && npm run lint",
+    "lint:remote2": "cd remote2 && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

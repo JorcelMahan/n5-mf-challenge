@@ -1,0 +1,8 @@
+{
+  "language": "Language",
+  "title": "N5 CHALLENGE",
+  "rickAndMorty": "View Rick & Morty characters",
+  "harryPotter": "View Harry Potter characters",
+  "loading": "Loading...",
+  "selectCharacterList": "Please select a character list."
+}
